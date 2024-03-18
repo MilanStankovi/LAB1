@@ -121,8 +121,13 @@ void Livada::raseje(int i, int j) {
 			}
 		}
 	}
+	bool stanje;
+	stanje = mat[i][j]->getotkriveno();
 	delete mat[i][j];
 	mat[i][j] = new Trava();
+	if (stanje) {
+		mat[i][j]->otkri();
+	}
 }
 void Livada::pojavaTrojanskeRuze(int i, int j) {
 	delete mat[i][j];
