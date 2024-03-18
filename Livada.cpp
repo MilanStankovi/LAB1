@@ -122,6 +122,7 @@ void Livada::raseje(int i, int j) {
 		}
 	}
 	delete mat[i][j];
+	mat[i][j] = new Trava();
 }
 void Livada::pojavaTrojanskeRuze(int i, int j) {
 	delete mat[i][j];
